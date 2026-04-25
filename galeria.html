@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Galeria de Pratos – Sabor & Crítica</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>" />
+  <style>
+    .galeria-destaque {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .galeria-destaque .item-grande {
+      grid-row: 1 / 3;
+    }
+    .galeria-destaque .item-grande img {
+      height: 400px;
+    }
+    @media(max-width: 768px){
+      .galeria-destaque { grid-template-columns: 1fr; }
+      .galeria-destaque .item-grande { grid-row: auto; }
+      .galeria-destaque .item-grande img { height: 260px; }
+    }
+    .tag {
+      display: inline-block;
+      background: var(--cor-acento);
+      color: var(--cor-primaria);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="topo">
+    <div class="header-top">
+      <div class="logo-text"> Sabor &amp; Crítica</div>
+      <div class="logo-sub">O guia definitivo de restaurantes</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"> Início</a></li>
+        <li><a href="galeria.html" class="ativo"> Galeria</a></li>
+        <li><a href="tabelas.html"> Rankings</a></li>
+        <li><a href="midia.html"> Mídia</a></li>
+        <li><a href="formulario.html"> Avaliar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" style="height:300px;">
+    <div class="hero-content">
+      <h1>Galeria Gastronômica</h1>
+      <p class="subtitulo-hero">Uma viagem visual pelos melhores pratos do Brasil</p>
+    </div>
+  </section>
+
+  <!-- INTRODUÇÃO -->
+  <section id="intro">
+    <div class="container">
+      <h2 class="secao-titulo">A Arte no Prato</h2>
+
+      <div class="paragrafo-card">
+        <p>
+          Dizem que <strong>comemos primeiro com os olhos</strong>, e é exatamente por isso que a apresentação dos pratos ocupa um lugar tão importante na nossa metodologia de avaliação. Um prato bem apresentado revela o <em>cuidado e a criatividade do chef</em>, e muitas vezes antecipa a qualidade do que está por vir. Nesta galeria, selecionamos fotografias dos pratos que mais nos impressionaram durante nossas visitas em 2024, cobrindo diferentes estilos culinários e regiões do país.
+        </p>
+      </div>
+
+      <div class="paragrafo-card">
+        <p>
+          Cada imagem desta coleção foi capturada por nossos fotógrafos especializados em <u>gastronomia e fotografia de alimentos</u>. As fotos não passam por filtros que alterem as cores reais dos pratos — acreditamos que a <b>autenticidade visual</b> é tão importante quanto a autenticidade do sabor. Clique em qualquer imagem para conhecer mais sobre o restaurante onde o prato foi fotografado e ler a avaliação completa de nossos críticos.
+        </p>
+      </div>
+
+      <!-- ÂNCORA INTERNA -->
+      <div style="text-align:center; margin-bottom: 20px;">
+        <a href="#galeria-principal" class="btn btn-primario">⬇ Ver a Galeria</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA COM 5 IMAGENS -->
+  <section id="galeria-principal" style="background:#f5ede0;">
+    <div class="container">
+      <h2 class="secao-titulo">Destaques da Temporada</h2>
+
+      <!-- Layout em destaque com imagem grande -->
+      <div class="galeria-destaque">
+
+        <!-- Imagem 1 – Grande destaque -->
+        <div class="galeria-item item-grande">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&h=500&fit=crop"
+               alt="Prato principal elaborado com legumes coloridos e proteína grelhada" />
+          <div class="galeria-caption">
+            <span class="tag"> Destaque do Mês</span>
+            <h3>Medalhão de Filé com Redução de Vinho</h3>
+            <p>Prato assinatura do Chef Eduardo Lima no restaurante <strong>Casa do Sertão</strong>, em Brasília. A carne, maturada por 30 dias, é servida com purê trufado e aspargos frescos do cerrado.</p>
+            <span class="estrelas">★★★★★</span>
+          </div>
+        </div>
+
+        <!-- Imagem 2 -->
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop"
+               alt="Prato de macarrão com molho vermelho e ervas frescas" />
+          <div class="galeria-caption">
+            <span class="tag"> Italiana</span>
+            <h3>Pappardelle al Ragù</h3>
+            <p>Massa fresca artesanal com ragù de cordeiro, finalizada com parmesão envelhecido 24 meses. <em>Le Pétit Bistrot, São Paulo.</em></p>
+            <span class="estrelas">★★★★½</span>
+          </div>
+        </div>
+
+        <!-- Imagem 3 -->
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=400&h=250&fit=crop"
+               alt="Pratos de sushi e culinária japonesa" />
+          <div class="galeria-caption">
+            <span class="tag"> Japonesa</span>
+            <h3>Omakase Nikkei</h3>
+            <p>Combinado de 12 peças criativas com influências da culinária peruana. <em>Yoshi Sushi, Curitiba.</em></p>
+            <span class="estrelas">★★★★★</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Duas imagens adicionais -->
+      <div class="galeria-grid" style="grid-template-columns: repeat(2, 1fr);">
+
+        <!-- Imagem 4 -->
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=280&fit=crop"
+               alt="Pizza artesanal saindo do forno a lenha" />
+          <div class="galeria-caption">
+            <span class="tag"> Pizzaria</span>
+            <h3>Pizza Margherita de Fermentação Longa</h3>
+            <p>Massa com 72 horas de fermentação, molho San Marzano importado e muçarela de búfala fresca. Uma das melhores pizzas que já avaliamos no Brasil, encontrada na <strong>Pizzaria Napolitana Vera</strong>, em São Paulo.</p>
+            <span class="estrelas">★★★★★</span>
+          </div>
+        </div>
+
+        <!-- Imagem 5 -->
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=280&fit=crop"
+               alt="Interior elegante de restaurante com mesas iluminadas" />
+          <div class="galeria-caption">
+            <span class="tag"> Ambiente</span>
+            <h3>Ambiente do Restaurante Cipriani</h3>
+            <p>O ambiente é tão importante quanto a comida. O <strong>Cipriani</strong>, no Rio de Janeiro, combina arquitetura clássica, iluminação sofisticada e serviço impecável. Uma experiência que encanta antes mesmo do primeiro garfo.</p>
+            <span class="estrelas">★★★★★</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LINKS E ÂNCORA -->
+  <section>
+    <div class="container" style="text-align:center;">
+      <h2 class="secao-titulo">Continue Explorando</h2>
+      <div class="links-grid">
+        <a href="tabelas.html" class="btn btn-primario"> Ver Rankings</a>
+        <a href="formulario.html" class="btn btn-primario"> Enviar sua Avaliação</a>
+        <a href="midia.html" class="btn btn-secundario"> Assistir Vídeos</a>
+        <a href="index.html" class="btn btn-secundario"> Voltar ao Início</a>
+      </div>
+      <a href="#topo" class="ancora-topo">⬆ Voltar ao topo</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo"> Sabor &amp; Crítica</div>
+    <p>© 2024 Sabor &amp; Crítica – Todos os direitos reservados</p>
+    <p>
+      <a href="index.html">Início</a> ·
+      <a href="galeria.html">Galeria</a> ·
+      <a href="tabelas.html">Rankings</a> ·
+      <a href="midia.html">Mídia</a> ·
+      <a href="formulario.html">Avaliar</a>
+    </p>
+  </footer>
+
+</body>
+</html>

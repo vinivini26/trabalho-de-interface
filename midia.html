@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Mídia – Sabor & Crítica</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+  <style>
+    .midia-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 40px;
+    }
+    @media(max-width: 768px){
+      .midia-grid { grid-template-columns: 1fr; }
+    }
+    .player-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cor-secundaria);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .podcast-card {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: var(--sombra);
+      margin-bottom: 20px;
+    }
+    .podcast-card h4 {
+      font-family: 'Playfair Display', serif;
+      color: var(--cor-primaria);
+      margin-bottom: 6px;
+    }
+    .podcast-card p {
+      font-size: 0.9rem;
+      color: var(--cor-cinza);
+      margin-bottom: 12px;
+    }
+    .duracao {
+      font-size: 0.8rem;
+      background: var(--cor-acento);
+      color: var(--cor-primaria);
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="topo">
+    <div class="header-top">
+      <div class="logo-text"> Sabor &amp; Crítica</div>
+      <div class="logo-sub">O guia definitivo de restaurantes</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"> Início</a></li>
+        <li><a href="galeria.html"> Galeria</a></li>
+        <li><a href="tabelas.html"> Rankings</a></li>
+        <li><a href="midia.html" class="ativo"> Mídia</a></li>
+        <li><a href="formulario.html"> Avaliar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" style="height:280px;">
+    <div class="hero-content">
+      <h1>Canal de Mídia</h1>
+      <p class="subtitulo-hero">Vídeos, podcasts e áudios sobre gastronomia</p>
+    </div>
+  </section>
+
+  <!-- INTRODUÇÃO -->
+  <section id="intro">
+    <div class="container">
+      <h2 class="secao-titulo">Gastronomia em Imagem e Som</h2>
+
+      <div class="paragrafo-card">
+        <p>
+          O canal de mídia do <strong>Sabor &amp; Crítica</strong> traz conteúdo audiovisual exclusivo para aprofundar sua experiência gastronômica. Aqui você encontra <em>documentários de bastidores</em>, entrevistas com grandes chefs, tour pelos restaurantes mais incríveis do país e episódios do nosso podcast semanal. Acreditamos que ver e ouvir sobre gastronomia é tão prazeroso quanto ler — cada formato tem o poder de despertar seus sentidos de uma maneira única e especial.
+        </p>
+      </div>
+
+      <div class="paragrafo-card">
+        <p>
+          Nossos <u>vídeos são produzidos com equipamentos profissionais</u> e passam por edição rigorosa antes de serem publicados. O podcast <b>"Sabor em Pauta"</b> é gravado toda semana com <em>críticos, chefs e especialistas do setor gastronômico</em>. Você pode assistir aos vídeos diretamente nesta página ou ouvir os episódios do podcast no player abaixo. Novos conteúdos são publicados toda <strong>terça e quinta-feira</strong>.
+        </p>
+      </div>
+
+      <div style="text-align:center; margin-bottom: 10px;">
+        <a href="#video-principal" class="btn btn-primario"> Ir para o Vídeo</a>
+        &nbsp;
+        <a href="#podcast-section" class="btn btn-secundario"> Ir para o Podcast</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VÍDEO PRINCIPAL -->
+  <section id="video-principal" style="background:#f5ede0;">
+    <div class="container">
+      <h2 class="secao-titulo"> Vídeo em Destaque</h2>
+
+      <div class="media-section">
+        <span class="player-label"> Documentário — Alta Gastronomia Brasileira</span>
+        <h3>Bastidores de uma Cozinha Estrelada</h3>
+        <p>Acompanhe o dia a dia do Chef Eduardo Lima na cozinha do <strong>Casa do Sertão</strong>, o restaurante número 1 do nosso ranking 2024. Um documentário exclusivo com imagens inéditas dos bastidores.</p>
+
+        
+        <iframe 
+      width="100%" 
+      height="500"
+      src="https://www.youtube.com/embed/P56JBrlv9Xs"
+      title="Vídeo sobre bastidores de cozinha de restaurante"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+      </iframe>
+
+        <p style="margin-top:16px; font-size:0.9rem; color:var(--cor-cinza);">
+          <em>Duração: 18min 32seg · Publicado em: 15/10/2024 · Direção: Equipe Sabor &amp; Crítica</em>
+        </p>
+      </div>
+
+      <!-- Mais vídeos grid -->
+      <div style="position:relative; padding-bottom:177%; height:0; overflow:hidden; max-width:350px;">
+  <iframe 
+    src="https://www.youtube.com/embed/JNSxBg1HxYA"
+    title="Entrevista com Chef Yoshi"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    style="position:absolute; top:0; left:0; width:100%; height:100%;">
+  </iframe>
+</div>
+
+        <div class="media-section">
+  <span class="player-label"> Tour Virtual</span>
+  <h3>Tour pelo Le Pétit Bistrot</h3>
+  <p>Conheça cada cantinho do restaurante mais elegante de São Paulo.</p>
+
+  <div style="position:relative; padding-bottom:177%; height:0; overflow:hidden; max-width:350px;">
+    <iframe 
+      src="https://www.youtube.com/embed/7TyQWKTFGsw"
+      title="Tour pelo restaurante Le Pétit Bistrot"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      style="position:absolute; top:0; left:0; width:100%; height:100%;">
+    </iframe>
+  </div>
+
+</div>
+
+      <a href="#topo" class="ancora-topo">⬆ Voltar ao topo</a>
+    </div>
+  </section>
+
+  <!--  ÁUDIO -->
+  <section id="podcast-section">
+    <div class="container">
+      <h2 class="secao-titulo"> Podcast — Sabor em Pauta</h2>
+
+      <div class="paragrafo-card">
+        <p>
+          O <strong>"Sabor em Pauta"</strong> é o podcast semanal do Sabor &amp; Crítica. A cada episódio, debatemos <em>tendências gastronômicas, novas aberturas, chefs em ascensão</em> e muito mais. Ouça diretamente aqui ou assine em sua plataforma preferida.
+        </p>
+      </div>
+
+      <!-- Áudio 1 -->
+      <div class="podcast-card">
+        <h4>Ep. 47 – Os Melhores Restaurantes de 2024</h4>
+        <p>Neste episódio especial, nossa equipe de críticos debate o ranking anual e revela os critérios por trás das notas.</p>
+        <span class="duracao"> 52min</span>
+        <!--
+          Áudio: usando arquivo de domínio público
+          Em produção real, apontaria para um arquivo .mp3 local ou CDN de áudio.
+        -->
+        <audio controls preload="metadata" aria-label="Episódio 47 do podcast Sabor em Pauta">
+          <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+          <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+      </div>
+
+      <!-- Áudio 2 -->
+      <div class="podcast-card">
+        <h4>Ep. 46 – Gastronomia Vegana: Além do Preconceito</h4>
+        <p>Conversamos com chefs especializados em culinária plant-based e descobrimos por que esse movimento veio para ficar.</p>
+        <span class="duracao"> 48min</span>
+        <audio controls preload="metadata" aria-label="Episódio 46 sobre gastronomia vegana">
+          <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+          <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+      </div>
+
+      <!-- Áudio 3 -->
+      <div class="podcast-card">
+        <h4>Ep. 45 – Harmonização: Guia Completo para Iniciantes</h4>
+        <p>Um episódio didático para quem quer aprender a combinar vinhos, cervejas artesanais e drinks com diferentes tipos de cozinha.</p>
+        <span class="duracao"> 61min</span>
+        <audio controls preload="metadata" aria-label="Episódio 45 sobre harmonização de bebidas">
+          <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+          <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+      </div>
+
+      <a href="#topo" class="ancora-topo"> Voltar ao topo</a>
+    </div>
+  </section>
+
+  <!-- NAVEGAÇÃO -->
+  <section style="background:#f5ede0;">
+    <div class="container" style="text-align:center;">
+      <div class="links-grid">
+        <a href="galeria.html" class="btn btn-primario"> Ver Galeria</a>
+        <a href="formulario.html" class="btn btn-primario"> Avaliar</a>
+        <a href="tabelas.html" class="btn btn-secundario"> Rankings</a>
+        <a href="index.html" class="btn btn-secundario"> Início</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo"> Sabor &amp; Crítica</div>
+    <p>© 2024 Sabor &amp; Crítica – Todos os direitos reservados</p>
+    <p>
+      <a href="index.html">Início</a> ·
+      <a href="galeria.html">Galeria</a> ·
+      <a href="tabelas.html">Rankings</a> ·
+      <a href="midia.html">Mídia</a> ·
+      <a href="formulario.html">Avaliar</a>
+    </p>
+  </footer>
+
+</body>
+</html>

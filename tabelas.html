@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Rankings & Tabelas – Sabor & Crítica</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>" />
+  <style>
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .badge-ouro { background: #ffd700; color: #5a4000; }
+    .badge-prata { background: #c0c0c0; color: #333; }
+    .badge-bronze { background: #cd7f32; color: white; }
+    .badge-ativo { background: #22c55e; color: white; }
+    .badge-fechado { background: #ef4444; color: white; }
+    .badge-sazonal { background: var(--cor-acento); color: var(--cor-primaria); }
+
+    .nota-alta { color: #22c55e; font-weight: 700; }
+    .nota-media { color: var(--cor-secundaria); font-weight: 700; }
+    .nota-baixa { color: #ef4444; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <header id="topo">
+    <div class="header-top">
+      <div class="logo-text"> Sabor &amp; Crítica</div>
+      <div class="logo-sub">O guia definitivo de restaurantes</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"> Início</a></li>
+        <li><a href="galeria.html"> Galeria</a></li>
+        <li><a href="tabelas.html" class="ativo"> Rankings</a></li>
+        <li><a href="midia.html"> Mídia</a></li>
+        <li><a href="formulario.html"> Avaliar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" style="height:280px;">
+    <div class="hero-content">
+      <h1>Rankings &amp; Tabelas</h1>
+      <p class="subtitulo-hero">Dados completos · Comparações detalhadas · Rankings atualizados</p>
+    </div>
+  </section>
+
+  <!-- INTRODUÇÃO -->
+  <section id="intro">
+    <div class="container">
+      <h2 class="secao-titulo">Análise Completa dos Melhores</h2>
+      <div class="paragrafo-card">
+        <p>
+          Nossos <strong>rankings são compilados trimestralmente</strong> com base nas avaliações dos nossos críticos, que combinam notas técnicas com índices de satisfação do público. A metodologia garante que tanto restaurantes de alta gastronomia quanto estabelecimentos populares possam competir em suas respectivas categorias de forma justa e transparente. <em>Números não mentem</em> — e aqui, você tem acesso aos dados completos.
+        </p>
+      </div>
+      <div style="text-align:center; margin-bottom: 16px;">
+        <a href="#tabela1" class="btn btn-primario">⬇ Ver Tabela de Rankings</a>
+        &nbsp;
+        <a href="#tabela2" class="btn btn-secundario">⬇ Ver Tabela de Preços</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABELA 1: RANKING COMPLETO -->
+  <section id="tabela1">
+    <div class="container">
+      <h2 class="secao-titulo">Tabela 1 – Ranking dos Melhores Restaurantes 2024</h2>
+
+      <div class="tabela-wrapper">
+        <table>
+          <caption> Top 8 Restaurantes Avaliados — Edição 2024</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Restaurante</th>
+              <th>Cidade / Estado</th>
+              <th>Culinária</th>
+              <th>Nota Crítico</th>
+              <th>Nota Público</th>
+              <th>Nota Final</th>
+              <th>Premiação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1º</strong></td>
+              <td><strong>Casa do Sertão</strong></td>
+              <td>Brasília, DF</td>
+              <td>Brasileira</td>
+              <td class="nota-alta">9,8</td>
+              <td class="nota-alta">9,6</td>
+              <td class="nota-alta">9,7</td>
+              <td><span class="badge badge-ouro"> Ouro</span></td>
+            </tr>
+            <tr>
+              <td><strong>2º</strong></td>
+              <td><strong>Le Pétit Bistrot</strong></td>
+              <td>São Paulo, SP</td>
+              <td>Francesa</td>
+              <td class="nota-alta">9,5</td>
+              <td class="nota-alta">9,3</td>
+              <td class="nota-alta">9,4</td>
+              <td><span class="badge badge-prata"> Prata</span></td>
+            </tr>
+            <tr>
+              <td><strong>3º</strong></td>
+              <td><strong>Yoshi Sushi</strong></td>
+              <td>Curitiba, PR</td>
+              <td>Japonesa</td>
+              <td class="nota-alta">9,2</td>
+              <td class="nota-alta">9,4</td>
+              <td class="nota-alta">9,3</td>
+              <td><span class="badge badge-bronze"> Bronze</span></td>
+            </tr>
+            <tr>
+              <td>4º</td>
+              <td>Pizzaria Napolitana Vera</td>
+              <td>São Paulo, SP</td>
+              <td>Italiana</td>
+              <td class="nota-alta">9,1</td>
+              <td class="nota-alta">9,5</td>
+              <td class="nota-alta">9,3</td>
+              <td><span class="badge badge-ouro">Destaque</span></td>
+            </tr>
+            <tr>
+              <td>5º</td>
+              <td>Tapioca da Vovó</td>
+              <td>Fortaleza, CE</td>
+              <td>Nordestina</td>
+              <td class="nota-alta">9,0</td>
+              <td class="nota-alta">9,2</td>
+              <td class="nota-alta">9,1</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>6º</td>
+              <td>Churrascaria Pampa Real</td>
+              <td>Porto Alegre, RS</td>
+              <td>Gaúcha</td>
+              <td class="nota-media">8,7</td>
+              <td class="nota-alta">9,1</td>
+              <td class="nota-media">8,9</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>7º</td>
+              <td>Maré Alta Frutos do Mar</td>
+              <td>Recife, PE</td>
+              <td>Frutos do Mar</td>
+              <td class="nota-media">8,5</td>
+              <td class="nota-media">8,8</td>
+              <td class="nota-media">8,7</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>8º</td>
+              <td>Tempero do Sul</td>
+              <td>Porto Alegre, RS</td>
+              <td>Brasileira</td>
+              <td class="nota-media">8,3</td>
+              <td class="nota-media">8,6</td>
+              <td class="nota-media">8,5</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">Média Geral do Ranking</td>
+              <td>9,0</td>
+              <td>9,2</td>
+              <td colspan="2">9,1 — Excelente</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <a href="#topo" class="ancora-topo"> Voltar ao topo</a>
+    </div>
+  </section>
+
+  <!-- TABELA 2 PREÇO E STATUS -->
+  <section id="tabela2" style="background:#f5ede0;">
+    <div class="container">
+      <h2 class="secao-titulo">Tabela 2 – Informações Gerais e Faixa de Preço</h2>
+
+      <div class="tabela-wrapper">
+        <table>
+          <caption> Guia de Preços e Informações Operacionais — 2024</caption>
+          <thead>
+            <tr>
+              <th>Restaurante</th>
+              <th>Faixa de Preço</th>
+              <th>Preço Médio (p/ pessoa)</th>
+              <th>Reserva</th>
+              <th>Capacidade</th>
+              <th>Funcionamento</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Casa do Sertão</strong></td>
+              <td>$$$ (Alto)</td>
+              <td>R$ 180 – R$ 280</td>
+              <td>Obrigatória</td>
+              <td>60 pessoas</td>
+              <td>Ter – Dom</td>
+              <td><span class="badge badge-ativo">Aberto</span></td>
+            </tr>
+            <tr>
+              <td><strong>Le Pétit Bistrot</strong></td>
+              <td>$$$$ (Luxo)</td>
+              <td>R$ 300 – R$ 500</td>
+              <td>Obrigatória</td>
+              <td>40 pessoas</td>
+              <td>Qua – Dom</td>
+              <td><span class="badge badge-ativo">Aberto</span></td>
+            </tr>
+            <tr>
+              <td><strong>Yoshi Sushi</strong></td>
+              <td>$$$ (Alto)</td>
+              <td>R$ 200 – R$ 350</td>
+              <td>Recomendada</td>
+              <td>30 pessoas</td>
+              <td>Ter – Sáb</td>
+              <td><span class="badge badge-ativo">Aberto</span></td>
+            </tr>
+            <tr>
+              <td><strong>Pizzaria Vera</strong></td>
+              <td>$$ (Médio)</td>
+              <td>R$ 80 – R$ 150</td>
+              <td>Não necessária</td>
+              <td>80 pessoas</td>
+              <td>Qui – Dom</td>
+              <td><span class="badge badge-ativo">Aberto</span></td>
+            </tr>
+            <tr>
+              <td><strong>Tapioca da Vovó</strong></td>
+              <td>$ (Popular)</td>
+              <td>R$ 25 – R$ 55</td>
+              <td>Não necessária</td>
+              <td>50 pessoas</td>
+              <td>Seg – Sáb</td>
+              <td><span class="badge badge-ativo">Aberto</span></td>
+            </tr>
+            <tr>
+              <td><strong>Churrascaria Pampa</strong></td>
+              <td>$$ (Médio)</td>
+              <td>R$ 120 – R$ 200</td>
+              <td>Recomendada</td>
+              <td>150 pessoas</td>
+              <td>Todos os dias</td>
+              <td><span class="badge badge-ativo">Aberto</span></td>
+            </tr>
+            <tr>
+              <td><strong>Maré Alta</strong></td>
+              <td>$$ (Médio)</td>
+              <td>R$ 90 – R$ 160</td>
+              <td>Não necessária</td>
+              <td>70 pessoas</td>
+              <td>Ter – Dom</td>
+              <td><span class="badge badge-sazonal">Sazonal</span></td>
+            </tr>
+            <tr>
+              <td><strong>Tempero do Sul</strong></td>
+              <td>$ (Popular)</td>
+              <td>R$ 40 – R$ 80</td>
+              <td>Não necessária</td>
+              <td>90 pessoas</td>
+              <td>Seg – Sex</td>
+              <td><span class="badge badge-fechado">Reformando</span></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">Legenda de preços</td>
+              <td colspan="5">$ = Popular · $$ = Médio · $$$ = Alto · $$$$ = Luxo</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <a href="#topo" class="ancora-topo">⬆ Voltar ao topo</a>
+    </div>
+  </section>
+
+  <!-- NAVEGAÇÃO -->
+  <section>
+    <div class="container" style="text-align:center;">
+      <div class="links-grid">
+        <a href="galeria.html" class="btn btn-primario"> Ver Galeria</a>
+        <a href="formulario.html" class="btn btn-primario"> Avaliar um Restaurante</a>
+        <a href="midia.html" class="btn btn-secundario"> Vídeos e Áudios</a>
+        <a href="index.html" class="btn btn-secundario"> Voltar ao Início</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo"> Sabor &amp; Crítica</div>
+    <p>© 2024 Sabor &amp; Crítica – Todos os direitos reservados</p>
+    <p>
+      <a href="index.html">Início</a> ·
+      <a href="galeria.html">Galeria</a> ·
+      <a href="tabelas.html">Rankings</a> ·
+      <a href="midia.html">Mídia</a> ·
+      <a href="formulario.html">Avaliar</a>
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Avaliar Restaurante – Sabor & Crítica</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>" />
+  <style>
+    .aviso-sucesso {
+      display: none;
+      background: #22c55e;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 8px;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .obrigatorio {
+      color: #ef4444;
+      font-size: 0.85rem;
+    }
+    .nota-texto {
+      font-size: 0.82rem;
+      color: var(--cor-cinza);
+      margin-top: 4px;
+      font-style: italic;
+    }
+    .form-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media(max-width: 600px){
+      .form-two-col { grid-template-columns: 1fr; }
+    }
+    .estrela-input {
+      display: flex;
+      gap: 8px;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+    .estrela-input input[type="radio"] {
+      display: none;
+    }
+    .estrela-input label {
+      color: #ddd;
+      cursor: pointer;
+      transition: color 0.2s;
+      font-weight: normal;
+    }
+    .estrela-input input[type="radio"]:checked ~ label,
+    .estrela-input label:hover,
+    .estrela-input label:hover ~ label {
+      color: var(--cor-secundaria);
+    }
+  </style>
+</head>
+<body>
+
+  <header id="topo">
+    <div class="header-top">
+      <div class="logo-text"> Sabor &amp; Crítica</div>
+      <div class="logo-sub">O guia definitivo de restaurantes</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"> Início</a></li>
+        <li><a href="galeria.html"> Galeria</a></li>
+        <li><a href="tabelas.html"> Rankings</a></li>
+        <li><a href="midia.html"> Mídia</a></li>
+        <li><a href="formulario.html" class="ativo">📝 Avaliar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" style="height:260px;">
+    <div class="hero-content">
+      <h1>Avalie um Restaurante</h1>
+      <p class="subtitulo-hero">Sua opinião é essencial para ajudar outros apreciadores</p>
+    </div>
+  </section>
+
+  <!-- INTRODUÇÃO -->
+  <section id="intro">
+    <div class="container">
+      <h2 class="secao-titulo">Compartilhe sua Experiência</h2>
+      <div class="paragrafo-card">
+        <p>
+          Preencha o formulário abaixo com <strong>honestidade e detalhes</strong>. Quanto mais informações você fornecer, mais útil sua avaliação será para outros leitores. Todas as avaliações passam por moderação antes de serem publicadas. <em>Não aceitamos avaliações com linguagem ofensiva</em> ou claramente tendenciosas. Seja justo, seja específico e ajude a comunidade a descobrir os melhores (e piores) restaurantes do Brasil!
+        </p>
+      </div>
+      <div style="text-align:center; margin-bottom:10px;">
+        <a href="#formulario-avaliacao" class="btn btn-primario">📝 Ir para o Formulário</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO COMPLETO -->
+  <section id="formulario-avaliacao" style="background:#f5ede0; padding: 60px 0;">
+    <div class="container">
+
+      <div class="form-container">
+        <div class="form-header">
+          <h2>Formulário de Avaliação</h2>
+          <p style="color: rgba(232,201,122,0.7); margin:8px 0 0; font-size:0.9rem;">
+            Campos marcados com <span style="color:#ef4444;">*</span> são obrigatórios
+          </p>
+        </div>
+
+        <div class="form-body">
+          <form action="#" method="post" id="form-avaliacao">
+
+            <!-- ===== FIELDSET 1: DADOS DO AVALIADOR ===== -->
+            <fieldset>
+              <legend> Dados do Avaliador</legend>
+
+              <div class="form-two-col">
+                <!-- 1. Campo de texto: nome -->
+                <div class="form-group">
+                  <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+                  <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+                </div>
+
+                <!-- 2. Campo de e-mail -->
+                <div class="form-group">
+                  <label for="email">E-mail <span class="obrigatorio">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+                </div>
+              </div>
+
+              <!-- 3. Radio: perfil do avaliador -->
+              <div class="form-group">
+                <label>Você se considera: <span class="obrigatorio">*</span></label>
+                <div class="radio-group">
+                  <label class="radio-item">
+                    <input type="radio" name="perfil" value="curioso" required />
+                    Curioso gastronômico (come por prazer)
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="perfil" value="critico" />
+                    Crítico amador (avalia com critério)
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="perfil" value="chef" />
+                    Profissional da gastronomia
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="perfil" value="influencer" />
+                    Influenciador / Criador de conteúdo
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+
+            <!-- ===== FIELDSET 2: DADOS DO RESTAURANTE ===== -->
+            <fieldset>
+              <legend> Dados do Restaurante</legend>
+
+              <!-- 4. Campo de texto: nome do restaurante -->
+              <div class="form-group">
+                <label for="restaurante">Nome do restaurante <span class="obrigatorio">*</span></label>
+                <input type="text" id="restaurante" name="restaurante" placeholder="Ex: Casa do Sertão" required />
+              </div>
+
+              <div class="form-two-col">
+                <!-- 5. Select: tipo de culinária -->
+                <div class="form-group">
+                  <label for="culinaria">Tipo de culinária <span class="obrigatorio">*</span></label>
+                  <select id="culinaria" name="culinaria" required>
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="brasileira"> Brasileira</option>
+                    <option value="italiana"> Italiana</option>
+                    <option value="japonesa"> Japonesa</option>
+                    <option value="francesa"> Francesa</option>
+                    <option value="arabe"> Árabe</option>
+                    <option value="mexicana"> Mexicana</option>
+                    <option value="vegana"> Vegana / Vegetariana</option>
+                    <option value="frutos-do-mar"> Frutos do Mar</option>
+                    <option value="churrascaria"> Churrascaria</option>
+                    <option value="outras"> Outras</option>
+                  </select>
+                </div>
+
+                <!-- 6. Campo numérico: preço médio -->
+                <div class="form-group">
+                  <label for="preco">Preço médio por pessoa (R$)</label>
+                  <input type="number" id="preco" name="preco" placeholder="Ex: 120" min="1" max="9999" />
+                  <p class="nota-texto">Valor aproximado que você gastou.</p>
+                </div>
+              </div>
+
+            </fieldset>
+
+            <!-- ===== FIELDSET 3: AVALIAÇÃO ===== -->
+            <fieldset>
+              <legend>⭐ Avaliação</legend>
+
+              <!-- 7. Radio: nota geral (estrelas) -->
+              <div class="form-group">
+                <label>Nota geral <span class="obrigatorio">*</span></label>
+                <div class="radio-group">
+                  <label class="radio-item">
+                    <input type="radio" name="nota" value="5" required /> ★★★★★ — Excepcional (5/5)
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="nota" value="4" /> ★★★★☆ — Muito bom (4/5)
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="nota" value="3" /> ★★★☆☆ — Bom (3/5)
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="nota" value="2" /> ★★☆☆☆ — Regular (2/5)
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="nota" value="1" /> ★☆☆☆☆ — Ruim (1/5)
+                  </label>
+                </div>
+              </div>
+
+              <!-- 8. Checkboxes: pontos positivos -->
+              <div class="form-group">
+                <label>Pontos positivos (marque todos que se aplicam):</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="positivos" value="comida-gostosa" />
+                     Comida muito saborosa
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="positivos" value="atendimento" />
+                     Atendimento excelente
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="positivos" value="ambiente" />
+                     Ambiente agradável e bem decorado
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="positivos" value="custo-beneficio" />
+                     Ótimo custo-benefício
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="positivos" value="porcoes-generosas" />
+                     Porções generosas
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="positivos" value="carta-vinhos" />
+                     Carta de vinhos e bebidas diversificada
+                  </label>
+                </div>
+              </div>
+
+              <!-- 9. Checkboxes: pontos negativos -->
+              <div class="form-group">
+                <label>Pontos a melhorar (marque todos que se aplicam):</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="negativos" value="espera-longa" />
+                     Tempo de espera muito longo
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="negativos" value="ruido" />
+                     Ambiente muito barulhento
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="negativos" value="preco-alto" />
+                     Preços elevados para o que oferece
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="negativos" value="limpeza" />
+                     Limpeza e higiene a desejar
+                  </label>
+                </div>
+              </div>
+
+              <!-- 10. Textarea: comentário livre -->
+              <div class="form-group">
+                <label for="comentario">Comentário detalhado <span class="obrigatorio">*</span></label>
+                <textarea id="comentario" name="comentario" rows="5"
+                  placeholder="Descreva sua experiência com detalhes: o que pediu, como estava o sabor, o atendimento, o ambiente..." required></textarea>
+                <p class="nota-texto">Mínimo de 50 caracteres. Seja específico e honesto.</p>
+              </div>
+
+            </fieldset>
+
+            <!-- ===== FIELDSET 4: VISITA ===== -->
+            <fieldset>
+              <legend> Detalhes da Visita</legend>
+
+              <div class="form-two-col">
+                <!-- Data da visita (como texto pois date pode ter compatibilidade variável) -->
+                <div class="form-group">
+                  <label for="data-visita">Data da visita</label>
+                  <input type="text" id="data-visita" name="data_visita" placeholder="Ex: 20/10/2024" />
+                </div>
+
+                <!-- Período da visita: Radio -->
+                <div class="form-group">
+                  <label>Período da visita:</label>
+                  <div class="radio-group">
+                    <label class="radio-item">
+                      <input type="radio" name="periodo" value="almoco" />  Almoço
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="periodo" value="jantar" />  Jantar
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="periodo" value="cafe" />  Café da Manhã / Brunch
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Checkbox: Você voltaria? -->
+              <div class="form-group">
+                <label>Outras informações:</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="voltaria" value="sim" />
+                     Voltaria ao restaurante
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="indicaria" value="sim" />
+                     Indicaria para amigos e família
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="termos" value="aceito" required />
+                     Aceito os termos de uso e a política de moderação <span class="obrigatorio">*</span>
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+
+            <!-- ===== BOTÕES ===== -->
+            <div class="form-acoes">
+              <input type="reset" value=" Limpar Formulário" onclick="document.getElementById('aviso-sucesso').style.display='none'" />
+              <input type="submit" value=" Enviar Avaliação" onclick="enviarForm(event)" />
+            </div>
+
+            <!-- Mensagem de sucesso -->
+            <div id="aviso-sucesso" class="aviso-sucesso">
+               Avaliação enviada com sucesso! Obrigado por contribuir com o Sabor &amp; Crítica.
+            </div>
+
+          </form>
+        </div><!-- .form-body -->
+      </div><!-- .form-container -->
+
+      <div style="text-align:center; margin-top: 30px;">
+        <a href="#topo" class="ancora-topo">⬆ Voltar ao topo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINKS -->
+  <section>
+    <div class="container" style="text-align:center;">
+      <div class="links-grid">
+        <a href="galeria.html" class="btn btn-primario"> Ver Galeria</a>
+        <a href="tabelas.html" class="btn btn-primario"> Rankings</a>
+        <a href="midia.html" class="btn btn-secundario"> Mídia</a>
+        <a href="index.html" class="btn btn-secundario"> Início</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo"> Sabor &amp; Crítica</div>
+    <p>© 2024 Sabor &amp; Crítica – Todos os direitos reservados</p>
+    <p>
+      <a href="index.html">Início</a> ·
+      <a href="galeria.html">Galeria</a> ·
+      <a href="tabelas.html">Rankings</a> ·
+      <a href="midia.html">Mídia</a> ·
+      <a href="formulario.html">Avaliar</a>
+    </p>
+  </footer>
+
+  <script>
+    function enviarForm(e) {
+      e.preventDefault();
+      const form = document.getElementById('form-avaliacao');
+      if (form.checkValidity()) {
+        document.getElementById('aviso-sucesso').style.display = 'block';
+        form.reset();
+        document.getElementById('aviso-sucesso').scrollIntoView({ behavior: 'smooth' });
+      } else {
+        form.reportValidity();
+      }
+    }
+  </script>
+
+</body>
+</html>
